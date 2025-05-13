@@ -29,7 +29,8 @@ def createfolder(filename):
         ".java":"Java Files",
         ".c":"C Files",
         ".cpp":"Cpp Files",
-        ".css": "CSS Files"
+        ".css": "CSS Files",
+        ".py":"Python Files"
     }
 
     foldername = folder_mappings.get(ext, None)
@@ -49,8 +50,8 @@ def createfolder(filename):
     else:
 
         print("A new extension detected!! Unable to create folder!!")
-    file=os.path.join(foldername,filename)
-    print(f"File saved at {os.path.abspath(file)}")
+    # file=os.path.join(foldername,filename)
+    # print(f"File saved at {os.path.abspath(file)}")
 
 # Main execution
 Welcome.welcome()
