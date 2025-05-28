@@ -30,7 +30,11 @@ def createfolder(filename):
         ".c":"C Files",
         ".cpp":"Cpp Files",
         ".css": "CSS Files",
-        ".py":"Python Files"
+        ".py":"Python Files",
+        ".odp":"Presentation Files\\Open office files",
+        ".odt":"Docx Files\\Open Office files",
+        ".ods":"Excel Files\\Open Office files",
+        ".ts":"TypeScript Files"
     }
 
     foldername = folder_mappings.get(ext, None)
@@ -54,9 +58,12 @@ def createfolder(filename):
     # print(f"File saved at {os.path.abspath(file)}")
 
 # Main execution
-Welcome.welcome()
-while True:
-    filename = input("Enter the filename: ")
-    ext = endswith(filename)
-    print(f"File extension: {ext}")
-    createfolder(filename)
+try:
+    Welcome.welcome()
+    while True:
+        filename = input("Enter the filename: ")
+        ext = endswith(filename)
+        print(f"File extension: {ext}")
+        createfolder(filename)
+except:
+    print("Something went wrong!! \n Maybe the program terminated manually ")
